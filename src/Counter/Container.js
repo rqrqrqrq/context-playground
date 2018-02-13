@@ -1,5 +1,5 @@
 // CONTAINER
-// its like presenter from mvp
+// its like presenter from mvp or viewmodel from mvvm
 // get things from context, do with them whatever you want and pass into VIEW
 
 import React from 'react';
