@@ -1,3 +1,5 @@
 {
-  "extends": "react-app"
+  "parser": "babel-eslint",
+  "extends": ["react-app", "prettier", "prettier/react"],
+  "plugins": ["flowtype", "prettier"]
 }

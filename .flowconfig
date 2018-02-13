@@ -8,6 +8,6 @@
 [lints]
 
 [options]
-all=true
+suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
 
 [strict]

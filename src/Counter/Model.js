@@ -1,16 +1,28 @@
+// @flow
+
 // MODEL
 // data + methods to change data
 // render children in provider
 
-import React from 'react';
+import React, { type Node } from 'react';
 
+// $FlowExpectedError
 const CounterContext = React.createContext({ value: 0 });
 
 const CounterProvider = CounterContext.Provider;
 
 export const CounterConsumer = CounterContext.Consumer;
 
-export class CounterModel extends React.Component {
+type Props = {
+  defaultValue: number,
+  children: Node,
+};
+
+type State = {
+  value: number,
+};
+
+export class CounterModel extends React.Component<Props, State> {
   static defaultProps = {
     defaultValue: 0,
   };
