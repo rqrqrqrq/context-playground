@@ -4,7 +4,7 @@
 
 import React from 'react';
 
-const CounterContext = React.createContext(0);
+const CounterContext = React.createContext({ value: 0 });
 
 const CounterProvider = CounterContext.Provider;
 
