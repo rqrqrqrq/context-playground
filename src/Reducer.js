@@ -16,7 +16,7 @@ export class Updater extends React.Component {
 export class Reducer extends React.Component {
   state = this.props.reducer();
 
-  dispatch = action => () =>
+  dispatch = action =>
     this.setState(state => this.props.reducer(state, action));
 
   render() {
@@ -57,10 +57,10 @@ export const A = () => (
     {({ state, dispatch }) => (
       <div>
         {state.value}
-        <button onClick={dispatch('inc')}>inc</button>
-        <button onClick={dispatch('dec')}>dec</button>
-        <button onClick={dispatch('reset')}>reset</button>
-        <button onClick={dispatch('incAsync')}>async increment</button>
+        <button onClick={() => dispatch('inc')}>inc</button>
+        <button onClick={() => dispatch('dec')}>dec</button>
+        <button onClick={() => dispatch('reset')}>reset</button>
+        <button onClick={() => dispatch('incAsync')}>async increment</button>
       </div>
     )}
   </Reducer>
