@@ -1,5 +1,7 @@
 import React from 'react';
 
+// TODO: typings or remove this
+
 export class Updater extends React.Component {
   state = this.props.initialState;
 
