@@ -51,16 +51,17 @@ export class CounterModel extends React.Component<Props, State> {
 
   render() {
     const { children } = this.props;
-    const { value } = this.state;
 
     return (
       <CounterProvider
         value={{
-          value,
-          inc: this.inc,
-          dec: this.dec,
-          reset: this.reset,
-          incAsync: this.incAsync,
+          state: this.state,
+          actions: {
+            inc: this.inc,
+            dec: this.dec,
+            reset: this.reset,
+            incAsync: this.incAsync,
+          },
         }}
       >
         {children}

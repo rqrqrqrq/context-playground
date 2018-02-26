@@ -9,5 +9,7 @@ import { CounterConsumer } from './Model';
 import { CounterView } from './View';
 
 export const CounterContainer = () => (
-  <CounterConsumer>{props => <CounterView {...props} />}</CounterConsumer>
+  <CounterConsumer>
+    {({ state, actions }) => <CounterView {...state} {...actions} />}
+  </CounterConsumer>
 );
