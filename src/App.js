@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import { Counter } from './Counter';
+// flowlint untyped-import:off
 import { A } from './Reducer';
 import { CounterModel } from './Counter/Model';
 import { CounterContainer } from './Counter/Container';
