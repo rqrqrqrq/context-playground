@@ -6,13 +6,13 @@
 
 import React from 'react';
 
-interface Props {
-  value: number;
-  inc: () => void;
-  dec: () => void;
-  reset: () => void;
-  incAsync: () => void;
-}
+type Props = {
+  value: number,
+  inc: () => void,
+  dec: () => void,
+  reset: () => void,
+  incAsync: () => void,
+};
 
 export const CounterView = ({ value, inc, dec, reset, incAsync }: Props) => (
   <div>
