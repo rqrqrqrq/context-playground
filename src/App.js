@@ -2,8 +2,7 @@
 
 import React, { Component } from 'react';
 import { Counter } from './Counter';
-// flowlint untyped-import:off
-import { A } from './Reducer';
+import { ReducerCounter } from './Reducer';
 import { CounterModel } from './Counter/Model';
 import { CounterContainer } from './Counter/Container';
 
@@ -24,7 +23,7 @@ class App extends Component<{}> {
         </CounterModel>
 
         <h2>reducer component (async dont work)</h2>
-        <A />
+        <ReducerCounter />
       </div>
     );
   }
