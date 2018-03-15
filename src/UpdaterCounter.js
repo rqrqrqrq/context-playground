@@ -3,7 +3,11 @@
 import React from 'react';
 import { Updater } from './UpdaterComponent';
 
-const initialState = {
+type State = {
+  value: number,
+};
+
+const initialState: State = {
   value: 0,
 };
 
@@ -30,7 +34,7 @@ export const UpdaterCounter = () => (
         >
           dec
         </button>
-        <button onClick={() => update(() => initialState)}>reset</button>
+        <button onClick={() => update(initialState)}>reset</button>
         <button
           onClick={() =>
             setTimeout(update, 1000, prevState => ({

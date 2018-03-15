@@ -4,7 +4,7 @@ import React, { type Node } from 'react';
 
 type Updater<S> = (state: S) => S;
 
-type Update<S> = (f: Updater<S>) => void;
+type Update<S> = (updater: Updater<S> | S) => void;
 
 type RenderChildrenProp<S> = {
   state: S,
