@@ -2,9 +2,10 @@
 
 import React, { Component } from 'react';
 import { Counter } from './Counter';
-import { ReducerCounter } from './Reducer';
+import { ReducerCounter } from './ReducerCounter';
 import { CounterModel } from './Counter/Model';
 import { CounterContainer } from './Counter/Container';
+import { UpdaterCounter } from './UpdaterCounter';
 
 class App extends Component<{}> {
   render() {
@@ -22,8 +23,11 @@ class App extends Component<{}> {
           <CounterContainer />
         </CounterModel>
 
-        <h2>reducer component (async dont work)</h2>
+        <h2>reducer component</h2>
         <ReducerCounter />
+
+        <h2>updater component</h2>
+        <UpdaterCounter />
       </div>
     );
   }
